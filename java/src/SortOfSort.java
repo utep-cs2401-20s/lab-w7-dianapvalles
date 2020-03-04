@@ -1,27 +1,28 @@
 public class SortOfSort {
     public static void sortOfSort(int[] nums) {
-        //sets the smallest value for the index
+        //Sets the smallest value for the index
         int lowestIndex= 0;
 
-        //sets the highest value for the index
+        //Sets the highest value for the index
         int highestIndex = nums.length-1;
 
-        //will be used to hold the highest value
-        int max;
+        //Will be used to hold the highest value
+        int max = Integer.MIN_VALUE;
 
-        //index of the highest element found
-        int indexCurr;
+        //Index of the highest element found
+        int indexCurr = 0;
 
-        //counter to choose the highest element's position
+        //Counter to choose the highest element's position
         int count = 0;
 
-        //used to swap values
-        int temp;
+        //Used to swap values
+        int temp = 0;
 
         //Iterates over the whole array
-        for(int i = 0; i < nums.length ; i++){
+        for(int i = 0; i < nums.length-1; i++){
             //Resets the max value
             max = Integer.MIN_VALUE;
+            //Updates indexCurr with i
             indexCurr = i;
 
             //Finds the maximum value in the non-sorted section
@@ -32,7 +33,7 @@ public class SortOfSort {
                 }
             }
 
-            //checks the boundaries of lowestIndex and highestIndex
+            //Checks the boundaries of lowestIndex and highestIndex
             if(lowestIndex < highestIndex) {
                 //Moves the largest to the "end"
                 if (count < 2) {
