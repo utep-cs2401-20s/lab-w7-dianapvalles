@@ -23,7 +23,7 @@ public class SortOfSort {
             //Resets the max value
             max = Integer.MIN_VALUE;
             //Updates indexCurr with i
-            indexCurr = i;
+            indexCurr = lowestIndex;
 
             //Finds the maximum value in the non-sorted section
             for(int j = lowestIndex ; j <= highestIndex; j++){
